@@ -1,0 +1,50 @@
+public class Pasajeros {
+    private String nombre;
+    private String apellido;
+    private String rut;
+    private String pasaportesanitario;
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getRut() {
+        return this.rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+
+    public String getPasaportesanitario() {
+        return this.pasaportesanitario;
+    }
+
+    public void setPasaportesanitario(String pasaportesanitario) {
+        this.pasaportesanitario = pasaportesanitario;
+    }
+
+    public Pasajeros(String nombre, String apellido, String rut, String pasaportesanitario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.rut = rut;
+        this.pasaportesanitario = pasaportesanitario;
+    }
+
+    public String toString(){
+        return "Nombre: "+this.nombre+" "+this.apellido+", rut: "+this.rut+", número de matricula "+this.pasaportesanitario;
+    }
+}

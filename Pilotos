@@ -1,0 +1,50 @@
+public class Pilotos {
+    private String nombre;
+    private String apellido;
+    private String rut;
+    private String vueloInscrito;
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getRut() {
+        return this.rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+
+    public String getVueloInscrito() {
+        return this.vueloInscrito;
+    }
+
+    public void setVueloInscrito(String vueloInscrito) {
+        this.vueloInscrito = vueloInscrito;
+    }
+
+    public Pilotos(String nombre, String apellido, String rut, String vueloInscrito) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.rut = rut;
+        this.vueloInscrito = vueloInscrito;
+    }
+
+    public String toString(){
+        return "Nombre: "+this.nombre+" "+this.apellido+", rut: "+this.rut+", número de matricula "+this.vueloInscrito;
+    }
+}

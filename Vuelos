@@ -1,0 +1,90 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Vuelos {
+    private List<Pilotos> pilotos;
+
+    public Vuelos() {
+        this.pilotos = new ArrayList<>();
+}
+
+    public boolean agregarPiloto(String nombre, String apellido, String rut, String vueloInscrito){
+        if(buscarPiloto(rut,nombre,vueloInscrito) == null) {
+            Pilotos pilotos = new Pilotos(nombre, apellido, rut, vueloInscrito);
+            this.pilotos.add(pilotos);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean agregarPiloto(Pilotos pilotos){
+        if(buscarPiloto(pilotos.getRut(),pilotos.getVueloInscrito()) == null){
+            this.pilotos.add(pilotos);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public boolean eliminarPiloto(String rut, String vueloInscrito){
+        Pilotos pilotos= this.buscarPiloto(rut,vueloInscrito);
+        if(pilotos != null){
+            this.pilotos.remove(pilotos);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public Pilotos buscarPiloto(String rut, String nombre, String vueloInscrito){
+        for(Pilotos pilotos : this.pilotos){
+            if(pilotos.getRut().equals(rut) && pilotos.getVueloInscrito().equals(vueloInscrito)){
+                return pilotos;
+            }
+        }
+        return null;
+    }
+    public List buscarPiloto(String rut, String 212180408){
+        ArrayList<Pilotos> pilotos = new ArrayList<>();
+        for(Pilotos pilotos : this.pilotos){
+            if(pilotos.getRut().equals(rut)){
+                pilotos.add(pilotos);
+            }
+        }
+        return pilotos;
+    }
+
+
+    public boolean modificarPilotos(String rut,String vueloInscrito){
+        boolean condicion = false;
+        for(Pilotos : this.pilotos){
+            if(pilotos.getRut().equals(rut)){
+                pilotos.setVueloInscrito(vueloInscrito);
+                condicion = true;
+                break;
+            }
+        }
+        return condicion;
+    }
+    public Pilotos modificarPiloto(Pilotos pilotos, String rut, String vueloInscrito){
+        pilotos.setRut(rut)
+        pilotos.setVueloInscrito(vueloInscrito);
+        return pilotos;
+    }
+
+    public void mostrarPiloto(){
+        for(Pilotos pilotos : this.pilotos){
+            System.out.println(pilotos.toString());
+        }
+    }
+
+    public void mostrarPiloto(List<Pilotos> pilotos){
+        for(Pilotos pilotos : pilotos){
+            System.out.println(pilotos.toString());
+        }
+    }
+
+}
